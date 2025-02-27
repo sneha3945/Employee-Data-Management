@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Data Management</title>
+    <meta name="description" content="Manage employee data with search, sorting, add, delete, and restore features.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="container">
+        <h1 class="title">Employee Management System</h1>
+
+        <!-- Search and Sort Section -->
+        <div class="search-sort">
+            <input type="text" id="search" placeholder="Search Employee">
+            <select id="sort">
+                <option value="name">Sort by Name</option>
+                <option value="salary">Sort by Salary</option>
+                <option value="joiningDate">Sort by Joining Date</option>
+                <option value="id">Sort by ID</option>
+            </select>
+        </div>
+
+        <!-- Employee Form -->
+        <div id="add-employee">
+            <h3>Add New Employee</h3>
+            <input type="text" id="name" placeholder="Employee Name">
+            <input type="number" id="salary" placeholder="Salary">
+            <input type="date" id="joiningDate">
+            <button onclick="addEmployee()">Add Employee</button>
+        </div>
+
+        <!-- Employee List Section -->
+        <div class="employee-section">
+            <h3>Active Employees</h3>
+            <ul id="employee-list"></ul>
+        </div>
+
+        <!-- Deleted Employee Section -->
+        <div class="employee-section">
+            <h3>Deleted Employees</h3>
+            <ul id="deleted-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
